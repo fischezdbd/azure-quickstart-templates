@@ -24,10 +24,10 @@
       "value": "7.7"
     },
     "primaryNodeVmSize": {
-      "value": "Standard_A4_v2"
+      "value": "Standard_A2_v2"
     },
     "secondaryNodeVmSize": {
-      "value": "Standard_A4_v2"
+      "value": "Standard_A2_v2"
     },
     "zabbixServerIPAddress": {
       "value": "Null"
