@@ -7,11 +7,11 @@ mongoAdminPasswd=$4
 staticIp=$5
 zabbixServer=$6
 
-install_mongo3() {
+install_mongo4() {
 
 	#create repo
 cat > /etc/yum.repos.d/mongodb-org-4.4.repo <<EOF
-[mongodb-org-3.4]
+[mongodb-org-4.4]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/4.4/x86_64/
 gpgcheck=0
@@ -96,7 +96,7 @@ install_zabbix() {
 }
 
 
-install_mongo3
+install_mongo4
 disk_format
 install_zabbix
 
