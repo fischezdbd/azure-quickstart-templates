@@ -37,7 +37,7 @@
         },
         "centOsVersion": {
             "type": "string",
-            "defaultValue": "8.3",
+            "defaultValue": "8.0",
             "allowedValues": [
                 "8.3",
                 "8.2",
