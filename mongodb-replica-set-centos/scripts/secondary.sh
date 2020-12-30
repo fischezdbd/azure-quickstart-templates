@@ -28,12 +28,12 @@ disk_format() {
 }
 
 
-install_mongo4() {
+install_mongo() {
 #create repo
-cat > /etc/yum.repos.d/mongodb-org-4.4.repo <<EOF
-[mongodb-org-4.4]
+cat > /etc/yum.repos.d/mongodb-org-$mongoDbVersion.repo <<EOF
+[mongodb-org-\$mongoDbVersion]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/4.4/x86_64/
+baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/\$mongoDbVersion/x86_64/
 gpgcheck=0
 enabled=1
 EOF
@@ -104,7 +104,7 @@ install_zabbix() {
 
 }
 
-install_mongo4
+install_mongo
 disk_format
 install_zabbix
 
