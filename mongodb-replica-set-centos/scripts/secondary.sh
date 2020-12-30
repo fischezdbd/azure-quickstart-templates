@@ -28,7 +28,7 @@ disk_format() {
 }
 
 
-install_mongo3() {
+install_mongo4() {
 #create repo
 cat > /etc/yum.repos.d/mongodb-org-4.4.repo <<EOF
 [mongodb-org-4.4]
@@ -104,7 +104,7 @@ install_zabbix() {
 
 }
 
-install_mongo3
+install_mongo4
 disk_format
 install_zabbix
 
