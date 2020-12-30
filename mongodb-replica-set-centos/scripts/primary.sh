@@ -7,7 +7,7 @@ mongoAdminPasswd=$4
 staticIp=$5
 zabbixServer=$6
 
-install_mongo4() {
+install_mongo() {
 
 	#create repo
 cat > /etc/yum.repos.d/mongodb-org-$mongoDbVersion.repo <<EOF
@@ -96,7 +96,7 @@ install_zabbix() {
 }
 
 
-install_mongo4
+install_mongo
 disk_format
 install_zabbix
 
