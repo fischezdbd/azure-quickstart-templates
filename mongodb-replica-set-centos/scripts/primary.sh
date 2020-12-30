@@ -6,6 +6,7 @@ mongoAdminUser=$3
 mongoAdminPasswd=$4
 staticIp=$5
 zabbixServer=$6
+mongoDbVersion=$7
 
 install_mongo() {
 
