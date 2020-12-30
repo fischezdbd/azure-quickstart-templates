@@ -11,7 +11,7 @@
 
 [![Deploy To Azure](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
 [![Deploy To Azure US Gov](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
-[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
+[![Visualize](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
 
 This template deploys a MongoDB Replica Set on CentOS and enables Zabbix monitoring, and allows user to define the number of secondary nodes. The replica set has a primary node, 2 secondary nodes by default.
 
@@ -70,13 +70,10 @@ Each VM of the replica set uses raid0 to improve performance. We use 4 data disk
 - 2.2 If db.mycol.find() command can show the result like primary node does, then means the replica set works.
 
 ##Known Limitations
-- The MongoDB version is 3.2.
+- The MongoDB version is limited to 4.4, 4.2, 4.0, 3.8, 3.6. Some versions of MongoDB are only configured to bind to localhost (and therefore will not allow connections from the internet). To change this, see the /etc/mongod.conf for binding ip's.
 - We expose all the nodes on public addresses so that you can access MongoDB service through internet directly.
 - MongoDB suggests that the replica set has an odd number of voting members. So the number of secondary nodes is better to set to even number, like 2, 4 or 6, then plus the primary node, fill the requirement that the replica set has an odd number of voting members.
 - A replica set can have up to 50 members, but only 7 voting members. So the maximum number of secondary nodes is 6.
 - The replica set doesn't have arbiter nodes.
 - The replica set enables internal authentication. Check /etc/mongokeyfile for details.
 - More MongoDB usage details please visit MongoDB website https://www.mongodb.org/ .
-
-
-
