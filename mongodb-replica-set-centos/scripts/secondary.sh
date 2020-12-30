@@ -2,6 +2,7 @@
 
 replSetName=$1
 zabbixServer=$2
+mongoDbVersion=$3
 
 
 
