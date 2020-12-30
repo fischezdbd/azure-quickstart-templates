@@ -259,7 +259,7 @@
           "fileUris": "[parameters('osSettings').scripts]"
         },
         "protectedSettings": {
-          "commandToExecute": "[concat('bash secondary.sh ', parameters('dnsname'), ' ', parameters('zabbixServerIPAddress'))]"
+          "commandToExecute": "[concat('bash secondary.sh ', parameters('dnsname'), ' ', parameters('zabbixServerIPAddress'), ' ', parameters('mongoDbVersion'))]"
         }
       }
     }
