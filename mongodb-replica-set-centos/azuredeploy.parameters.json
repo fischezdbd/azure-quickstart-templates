@@ -23,9 +23,6 @@
     "centOsVersion": {
       "value": "8.0"
     },
-    "mongoDbVersion": {
-      "value": "4.4"
-    },
     "primaryNodeVmSize": {
       "value": "Standard_A2_v2"
     },
@@ -37,6 +34,9 @@
     },
     "adminPasswordOrKey": {
       "value": "GEN-SSH-PUB-KEY"
+    },
+    "mongoDbVersion": {
+      "value": "4.4"
     }
   }
 }
