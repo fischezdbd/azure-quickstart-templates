@@ -40,7 +40,10 @@
     },
     "adminPasswordOrKey": {
       "type": "securestring"
-    }
+    },
+    "mongoDbVersion": {
+      "type": "string"
+    }    
   },
   "variables": {
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('subnet').vnet, parameters('subnet').name)]",
