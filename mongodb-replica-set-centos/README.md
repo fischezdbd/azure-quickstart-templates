@@ -77,3 +77,37 @@ Each VM of the replica set uses raid0 to improve performance. We use 4 data disk
 - The replica set doesn't have arbiter nodes.
 - The replica set enables internal authentication. Check /etc/mongokeyfile for details.
 - More MongoDB usage details please visit MongoDB website https://www.mongodb.org/ .
+
+###More info on Azure VM sizes for MongoDB
+1.  A  series
+
+A series offers general purpose instances that fit most workloads. They are available in various sizes ranging from 0.75 GB to 56 GB. 
+Inside A series you are offered two options – ‘Basic’ and ‘Standard’.  
+The ‘Basic’ version costs less but does not offer load balancing, auto-scaling etc. 
+From a database perspective, the most important difference is that with ‘Basic’ instances your azures disks (page blobs) are limited to 300 IOPS/disk whereas with ‘Standard’ instances you can go up to 500 IOPS/disk. 
+This can make a big difference, especially with larger instances when you can RAID the disks. 
+Our recommendation is to use ‘Standard’ machines whenever possible to leverage the enhanced I/O. 
+The number of disks that can be attached to a VM depends on the size of the VM. 
+You can go up to 16 disks for  A7 machine. More details can be found here: https://docs.microsoft.com/en-us/azure/cloud-services/cloud-services-sizes-specs
+
+2.  D series/ DS series
+
+D series instances offer better performance compared to the A series  - specifically better CPU and local SSD instances. 
+The local SSD disk will give you the best disk performance possible on Azure. 
+However, it is called ‘local’ for a reason. 
+The data on these disks is ephemeral – if for any reason your VM is stopped you will lose all the data on your disk. 
+So the Local SSD should not be used as a primary store. 
+The DS series is more interesting from a data perspective because it is the only instance type that supports Premium storage. 
+Premium storage as the name suggests offers enhanced disk IOPS depending on the size of the disk. 
+If possible try to use premium storage for all your data disks. For more details consult the Premium storage overview.
+
+Disk Types	P10	P20	P30
+Disk Size	128 GB	512 GB	1024 GB
+IOPS per Disk	500	2300	5000
+Throughput per Disk	100 MB/sec	150 MB/sec	200 MB/sec
+
+3.  G series
+
+This is the ‘monster’ series offering huge amounts of RAM (up to 448 GB) and local SSD. 
+If you can afford it this series offers the best performance.  
+The G series instances might only be available in the West US and East US 2 datacenters.
