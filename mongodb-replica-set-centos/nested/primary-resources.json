@@ -52,6 +52,9 @@
     },
     "adminPasswordOrKey": {
       "type": "securestring"
+    },
+    "mongoDbVersion": {
+      "type": "string"
     }
   },
   "variables": {
