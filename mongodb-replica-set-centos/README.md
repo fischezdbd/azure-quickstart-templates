@@ -27,10 +27,10 @@ The nodes are under the same subnet 10.0.1.0/24. The primary node ip is 10.0.1.2
 
 - secondary node 2 ip: 10.0.1.5
 
-##Important Notice
+## Important Notice
 Each VM of the replica set uses raid0 to improve performance. We use 4 data disks on each VM for raid0. The size of data disks(setup raid0) on each VM are determined by yourself. However, there is size of data disks limit per the VM size. Before you set the size of data disks, please refer to the link https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-sizes/ for the correct choice.
 
-##After deployment, you can do below to verify if the replica set really works or not:
+## After deployment, you can do below to verify if the replica set really works or not:
 
 1. SSH connect to primary node, execute below
   ```
@@ -69,7 +69,7 @@ Each VM of the replica set uses raid0 to improve performance. We use 4 data disk
 
 - 2.2 If db.mycol.find() command can show the result like primary node does, then means the replica set works.
 
-##Known Limitations
+## Known Limitations
 - The MongoDB version is limited to 4.4, 4.2, 4.0, 3.8, 3.6. Some versions of MongoDB are only configured to bind to localhost (and therefore will not allow connections from the internet). To change this, see the /etc/mongod.conf for binding ip's.
 - We expose all the nodes on public addresses so that you can access MongoDB service through internet directly.
 - MongoDB suggests that the replica set has an odd number of voting members. So the number of secondary nodes is better to set to even number, like 2, 4 or 6, then plus the primary node, fill the requirement that the replica set has an odd number of voting members.
@@ -78,7 +78,7 @@ Each VM of the replica set uses raid0 to improve performance. We use 4 data disk
 - The replica set enables internal authentication. Check /etc/mongokeyfile for details.
 - More MongoDB usage details please visit MongoDB website https://www.mongodb.org/ .
 
-###More info on Azure VM sizes for MongoDB
+## More info on Azure VM sizes for MongoDB
 1.  A  series
 
 A series offers general purpose instances that fit most workloads. They are available in various sizes ranging from 0.75 GB to 56 GB. 
