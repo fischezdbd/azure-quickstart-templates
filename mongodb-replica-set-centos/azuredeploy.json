@@ -49,21 +49,6 @@
                 "description": "The CentOS version for the VM. This will pick a fully patched image of this given CentOS version."
             }
         },
-        "mongoDbVersion": {
-            "type": "string",
-            "defaultValue": "4.4",
-            "allowedValues": [
-                "4.4",
-                "4.2",
-                "4.0",
-                "3.8",
-                "3.6",
-                "3.4"
-            ],
-            "metadata": {
-                "description": "The MongoDB version to be installed on the VM. This will pick a release version (even minor version) of MongoDB."
-            }
-        },
         "secondaryNodeCount": {
             "type": "int",
             "defaultValue": 2,
@@ -114,6 +99,21 @@
             "type": "securestring",
             "metadata": {
                 "description": "SSH Key or password for the Virtual Machine. SSH key is recommended."
+            }
+        },
+        "mongoDbVersion": {
+            "type": "string",
+            "defaultValue": "4.4",
+            "allowedValues": [
+                "4.4",
+                "4.2",
+                "4.0",
+                "3.8",
+                "3.6",
+                "3.4"
+            ],
+            "metadata": {
+                "description": "The MongoDB version to be installed on the VM. This will pick a release version (even minor version) of MongoDB."
             }
         },
         "_artifactsLocation": {
