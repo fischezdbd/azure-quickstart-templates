@@ -68,7 +68,7 @@ EOF
 	sed -i 's/^#security/security/' /etc/mongod.conf
 	sed -i '/^security/akeyFile: /etc/mongokeyfile' /etc/mongod.conf
 	sed -i 's/^keyFile/  keyFile/' /etc/mongod.conf
-	sed -i 's/^bindIp/  bindIp: 0.0.0.0  #/' /etc/mongod.conf
+	sed -i 's/#bindIp:/bindIp: 0.0.0.0  #/' /etc/mongod.conf
 }
 
 
