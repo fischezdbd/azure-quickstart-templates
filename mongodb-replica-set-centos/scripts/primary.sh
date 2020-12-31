@@ -142,7 +142,7 @@ chmod 600 /etc/mongokeyfile
 sed -i 's/^#security/security/' /etc/mongod.conf
 sed -i '/^security/akeyFile: /etc/mongokeyfile' /etc/mongod.conf
 sed -i 's/^keyFile/  keyFile/' /etc/mongod.conf
-sed -i 's/^bindIp/  bindIp: 0.0.0.0  #/' /etc/mongod.conf
+sed -i 's/#bindIp:/bindIp: 0.0.0.0  #/' /etc/mongod.conf
 
 sleep 15
 MongoPid1=`ps -ef |grep "mongod --dbpath /var/lib/mongo/" | grep -v grep |awk '{print $2}'`
