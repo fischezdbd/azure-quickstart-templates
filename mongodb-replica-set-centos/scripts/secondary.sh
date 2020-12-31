@@ -1,8 +1,8 @@
 #!/bin/bash
 
 replSetName=$1
-zabbixServer=$2
-mongoDbVersion=$3
+mongoDbVersion=$2
+zabbixServer=$3
 
 
 
