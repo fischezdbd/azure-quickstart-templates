@@ -257,6 +257,9 @@
                     },
                     "location": {
                         "value": "[parameters('location')]"
+                    },
+                    "mongoDbVersion": {
+                        "value": "[parameters('mongoDbVersion')]"
                     }
                 }
             }
@@ -323,6 +326,9 @@
                     },
                     "location": {
                         "value": "[parameters('location')]"
+                    },
+                    "mongoDbVersion": {
+                        "value": "[parameters('mongoDbVersion')]"
                     }
                 }
             }
