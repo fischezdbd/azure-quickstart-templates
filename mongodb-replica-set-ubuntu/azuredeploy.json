@@ -150,7 +150,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://github.com/fischezdbd/azure-quickstart-templates/master/mongodb-replica-set-ubuntu/",
+      "defaultValue": "https://raw.githubusercontent.com/fischezdbd/azure-quickstart-templates/master/mongodb-replica-set-ubuntu/",
       "metadata": {
         "description": "The base URI where artifacts required by this template are located"
       }
