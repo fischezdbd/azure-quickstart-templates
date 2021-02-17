@@ -99,7 +99,7 @@ install_zabbix() {
 
 install_mongo
 disk_format
-install_zabbix
+#install_zabbix
 
 
 #start mongod
