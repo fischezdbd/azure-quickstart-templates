@@ -123,7 +123,7 @@
     },
     "mongodbVersion": {
       "type": "string",
-      "defaultValue": "4.0.2",
+      "defaultValue": "4.4.0",
       "metadata": {
         "description": "The version of the MongoDB packages to be deployed"
       }
@@ -229,7 +229,7 @@
       "osName": "ubuntu",
       "installerBaseUrl": "http://repo.mongodb.org/apt/ubuntu",
       "installerPackages": "mongodb-org",
-      "installerVersion": "4.0.2",
+      "installerVersion": "4.4.0",
       "imagePublisher": "Canonical",
       "imageOffer": "UbuntuServer",
       "imageSKU": "14.04.5-LTS"
