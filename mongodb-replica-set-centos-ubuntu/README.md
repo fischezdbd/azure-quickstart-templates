@@ -1,17 +1,8 @@
 # Install MongoDB Replica Set
 
-![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/PublicLastTestDate.svg)
-![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/PublicDeployment.svg)
 
-![Azure US Gov Last Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/FairfaxLastTestDate.svg)
-![Azure US Gov Last Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/FairfaxDeployment.svg)
-
-![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/BestPracticeResult.svg)
-![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/mongodb-replica-set-centos/CredScanResult.svg)
-
-[![Deploy To Azure](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
-[![Deploy To Azure US Gov](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
-[![Visualize](https://raw.githubusercontent.com/bluedot/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fbluedot%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos%2Fazuredeploy.json)
+[![Deploy To Azure](https://raw.githubusercontent.com/fischezdbd/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ffischezdbd%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos-ubuntu%2Fazuredeploy.json)
+[![Visualize](https://raw.githubusercontent.com/fischezdbd/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Ffischezdbd%2Fazure-quickstart-templates%2Fmaster%2Fmongodb-replica-set-centos-ubuntu%2Fazuredeploy.json)
 
 This template deploys a MongoDB Replica Set on CentOS and enables Zabbix monitoring, and allows user to define the number of secondary nodes. The replica set has a primary node, 2 secondary nodes by default.
 
