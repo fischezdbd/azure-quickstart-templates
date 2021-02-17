@@ -75,71 +75,71 @@
           }
         ]
       },
-      {
-        "apiVersion": "2020-05-01",
-        "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "[concat(parameters('storageSettings').vhdStorageAccountName, 'securityGroup')]",
-        "location": "[parameters('location')]",
-        "properties": {
-          "securityRules": [
-            {
-              "name": "SSH",
-              "properties": {
-                "description": "Allows SSH traffic",
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "22",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 100,
-                "direction": "Inbound"
-              }
-            },
-            {
-              "name": "MongoDB",
-              "properties": {
-                "description": "Allows MongoDB traffic",
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "27017",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 110,
-                "direction": "Inbound"
-              }
-            },
-            {
-              "name": "zabbixAgent",
-              "properties": {
-                "description": "Allows zabbix monitoring",
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "10050",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 120,
-                "direction": "Inbound"
-              }
-            },
-            {
-              "name": "zabbixAgent1",
-              "properties": {
-                "description": "Allows zabbix monitoring",
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "10051",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 130,
-                "direction": "Inbound"
-              }
+    },
+    {
+      "apiVersion": "2020-05-01",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "[concat(parameters('storageSettings').vhdStorageAccountName, 'securityGroup')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH",
+            "properties": {
+              "description": "Allows SSH traffic",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "22",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
             }
-          ]
-        }
+          },
+          {
+            "name": "MongoDB",
+            "properties": {
+              "description": "Allows MongoDB traffic",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "27017",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 110,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "zabbixAgent",
+            "properties": {
+              "description": "Allows zabbix monitoring",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "10050",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 120,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "zabbixAgent1",
+            "properties": {
+              "description": "Allows zabbix monitoring",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "10051",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 130,
+              "direction": "Inbound"
+            }
+          }
+        ]
       }
     }
   ]
