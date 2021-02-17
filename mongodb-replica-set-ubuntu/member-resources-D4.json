@@ -57,7 +57,7 @@
       ],
       "properties": {
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('storageSettings').vhdStorageAccountName, 'securityGroup'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('commonSettings').securityGroupName)]"
         },
         "ipConfigurations": [
           {

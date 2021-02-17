@@ -245,7 +245,8 @@
     "jumpboxTemplateUrl": "[uri(parameters('_artifactsLocation'), concat(variables(concat('jumpboxTemplate', parameters('jumpbox'))), parameters('_artifactsLocationSasToken')))]",
     "arbiterTemplateUrl": "[uri(parameters('_artifactsLocation'), concat(variables(concat('arbiterTemplate', variables('clusterSpec').arbiter)), parameters('_artifactsLocationSasToken')))]",
     "commonSettings": {
-      "availabilitySetName": "mongodbAvailSet"
+      "availabilitySetName": "mongodbAvailSet",
+      "securityGroupName": "[concat(parameters('storageAccountNamePrefix'), 'SecurityGroup')]"
     },
     "storageSettings": {
       "vhdStorageAccountName": "[parameters('storageAccountNamePrefix')]",

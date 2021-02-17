@@ -79,7 +79,7 @@
     {
       "apiVersion": "2020-05-01",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "[concat(parameters('storageSettings').vhdStorageAccountName, 'securityGroup')]",
+      "name": "[parameters('commonSettings').securityGroupName]",
       "location": "[parameters('location')]",
       "properties": {
         "securityRules": [
