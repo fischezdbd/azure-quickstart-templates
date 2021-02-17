@@ -181,9 +181,8 @@ install_mongodb()
 	log "Downloading MongoDB package $PACKAGE_NAME from $PACKAGE_URL"
 
 	# Configure mongodb.list file with the correct location
-	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
-	echo "deb ${PACKAGE_URL} "$(lsb_release -sc)"/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list
-
+	wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+	echo "deb [ arch=amd64,arm64 ] ${PACKAGE_URL} "$(lsb_release -sc)"/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 	# Install updates
 	apt-get -y update
 
@@ -193,8 +192,8 @@ install_mongodb()
 	fi
 
 	#Install Mongo DB
-	log "Installing MongoDB package $PACKAGE_NAME=$PACKAGE_VERSION"
-	apt-get -y install $PACKAGE_NAME=$PACKAGE_VERSION
+	log "Installing MongoDB package 4.4"
+	apt-get install -y mongodb-org
 
 	# Stop Mongod as it may be auto-started during the above step (which is not desirable)
 	stop_mongodb
