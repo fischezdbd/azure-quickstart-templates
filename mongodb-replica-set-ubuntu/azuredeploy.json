@@ -232,7 +232,7 @@
       "installerVersion": "4.4.0",
       "imagePublisher": "Canonical",
       "imageOffer": "UbuntuServer",
-      "imageSKU": "20.04.2-LTS"
+      "imageSKU": "18.04-LTS"
     },
     "vmStorageAccountContainerName": "vhd-mongodb",
     "vmStorageAccountDomain": ".blob.core.windows.net",
