@@ -354,13 +354,13 @@ install_mongodb
 configure_mongodb
 
 # Step 5
-#start_mongodb
+start_mongodb
 
 # Step 6
-#configure_db_users
+configure_db_users
 
 # Step 7
-#configure_replicaset
+configure_replicaset
 
 # Exit (proudly)
 exit 0
