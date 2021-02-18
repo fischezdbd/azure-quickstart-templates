@@ -307,6 +307,7 @@ EOF
 	#sed -i "s|pre-start script|pre-start script\n  if [ ! -d /var/run/mongodb ]; then\n    mkdir -p /var/run/mongodb \&\& touch /var/run/mongodb/mongod.pid \&\& chmod 777 /var/run/mongodb/mongod.pid \&\& chown mongodb:mongodb /var/run/mongodb/mongod.pid\n  fi\n|" /etc/mongod.conf
 
 	mkdir -p /var/run/mongodb
+	chown -R mongodb:mongodb /var/run/mongodb
 	touch /var/run/mongodb/mongod.pid
 	chmod 777 /var/run/mongodb/mongod.pid 
 	chown mongodb:mongodb /var/run/mongodb/mongod.pid
